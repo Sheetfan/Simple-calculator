@@ -12,18 +12,19 @@ function buttonClick(num1){ //to display the numbers
         display = "";
         numbers = "";
         textBox.value = "";
-        isZero();
+        isZero(num1);
         clicked = false;
     }
     else{
-        isZero();
+        isZero(num1);
     }  
 };
 
-function isZero(){ // insures the zero button will not work if the display is zero or empty.
-    display += button[num1].innerText;
+function isZero(num1){ // insures the zero button will not work if the display is zero or empty.
+    
     const button = document.querySelectorAll(".buttons");
     const textBox = document.getElementById("display");
+    // display += button[num1].innerText;
     if( !((textBox.value == 0||textBox.value.length == 0)  && button[num1].innerText == "0" )){
         display += button[num1].innerText;
         console.log(display);
